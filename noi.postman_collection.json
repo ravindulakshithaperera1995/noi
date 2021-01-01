@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "1bd68822-5db2-4ce2-ab5f-75613a986047",
+		"name": "noi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add new event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"NOI 2021 Awards Ceremony\",\n    \"description\": \"NOI 2021 Awards Ceremony\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/acm/time-line-event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acm",
+						"time-line-event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/acm/time-line-event?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acm",
+						"time-line-event"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/acm/time-line-event/f38270c8-bc38-4c98-ae38-bc58d6f86876",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acm",
+						"time-line-event",
+						"f38270c8-bc38-4c98-ae38-bc58d6f86876"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an exsiting event",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"93d8814f-22ed-4056-adbf-c8caaccccba6\",\n    \"title\" : \"3rd practice contest\",\n    \"description\" : \"3rd practice contest to be held\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/acm/time-line-event/93d8814f-22ed-4056-adbf-c8caaccccba6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acm",
+						"time-line-event",
+						"93d8814f-22ed-4056-adbf-c8caaccccba6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/acm/time-line-event/e7f73f72-a582-4a3f-95f7-8c10752867f4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"acm",
+						"time-line-event",
+						"e7f73f72-a582-4a3f-95f7-8c10752867f4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
